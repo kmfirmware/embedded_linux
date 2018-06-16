@@ -1,0 +1,270 @@
+1: System Load Linux to SDRAM via TFTP.                                         
+ Please Input new ones /or Ctrl-C to discard                                    
+        Input device IP (192.168.1.102) ==:                                     
+                                                                                
+        Input server IP (192.168.1.100) ==:                                     
+                                                                                
+        Input Linux Kernel filename (/tftpboot/openwrt-initramfs-uImage.bin) ==:
+                                                                                
+                                                                                
+ netboot_common, argc= 3                                                        
+ *************buf = 0x81fcc0e0                                                  
+ **********NexTxPacket = 81fe41c0                                               
+                                                                                
+ NetTxPacket = 0x81FE41C0                                                       
+                                                                                
+ NetRxPackets[0] = 0x81FE47C0                                                   
+                                                                                
+ NetRxPackets[1] = 0x81FE4DC0                                                   
+                                                                                
+ NetRxPackets[2] = 0x81FE53C0                                                   
+                                                                                
+ NetRxPackets[3] = 0x81FE59C0                                                   
+                                                                                
+ NetRxPackets[4] = 0x81FE5FC0                                                   
+                                                                                
+ NetRxPackets[5] = 0x81FE65C0                                                   
+                                                                                
+ NetRxPackets[6] = 0x81FE6BC0                                                   
+                                                                                
+ NetRxPackets[7] = 0x81FE71C0                                                   
+                                                                                
+ NetRxPackets[8] = 0x81FE77C0                                                   
+                                                                                
+ NetRxPackets[9] = 0x81FE7DC0                                                   
+                                                                                
+ NetRxPackets[10] = 0x81FE83C0                                                  
+                                                                                
+ NetRxPackets[11] = 0x81FE89C0                                                  
+                                                                                
+ NetRxPackets[12] = 0x81FE8FC0                                                  
+                                                                                
+ NetRxPackets[13] = 0x81FE95C0                                                  
+                                                                                
+ NetRxPackets[14] = 0x81FE9BC0                                                  
+                                                                                
+ NetRxPackets[15] = 0x81FEA1C0                                                  
+                                                                                
+ NetRxPackets[16] = 0x81FEA7C0                                                  
+                                                                                
+ NetRxPackets[17] = 0x81FEADC0                                                  
+                                                                                
+ NetRxPackets[18] = 0x81FEB3C0                                                  
+                                                                                
+ NetRxPackets[19] = 0x81FEB9C0                                                  
+                                                                                
+ KSEG1ADDR(NetTxPacket) = 0xA1FE41C0                                            
+                                                                                
+ NetLoop,call eth_halt !                                                        
+                                                                                
+ NetLoop,call eth_init !                                                        
+Trying Eth0 (10/100-M)                                                          
+                                                                                
+ Waitting for RX_DMA_BUSY status Start... done                                  
+                                                                                
+ Header Payload scatter function is Disable !!                                  
+                                                                                
+ ETH_STATE_ACTIVE!!                                                             
+Using Eth0 (10/100-M) device                                                    
+TFTP from server 192.168.1.100; our IP address is 192.168.1.102                 
+Filename '/tftpboot/openwrt-initramfs-uImage.bin'.                              
+                                                                                
+ TIMEOUT_COUNT=10,Load address: 0x80800000                                      
+Loading: Got ARP REPLY, set server/gtwy eth addr (00:19:db:b0:bd:88)            
+Got it                                                                          
+T #                                                                             
+ first block received                                                           
+################################################################                
+         #################################################################      
+         #################################################################      
+         #################################################################      
+         #################################################################      
+         #################################################################      
+         #################################################################      
+         #################################################################      
+         #################################################################      
+         #################################################################      
+         #################################################################      
+         #################################################################      
+         #################################################################      
+         #################################################################      
+         #################################################################      
+         ########################################################               
+done                                                                            
+Bytes transferred = 5278524 (508b3c hex)                                        
+NetBootFileXferSize= 00508b3c                                                   
+Automatic boot of image at addr 0x80800000 ...                                  
+## Booting image at 80800000 ...                                                
+   Image Name:   MIPS OpenWrt Linux-3.10.36                                     
+   Created:      2014-06-12  17:57:45 UTC                                       
+                                                                                
+ System Control Status = 0x00400000                                             
+   Image Type:   MIPS Linux Kernel Image (lzma compressed)                      
+   Data Size:    5278460 Bytes =  5 MB                                          
+   Load Address: 80000000                                                       
+   Entry Point:  80000000                                                       
+   Verifying Checksum ... OK                                                    
+   Uncompressing Kernel Image ... OK                                            
+No initrd                                                                       
+## Transferring control to Linux (at address 80000000) ...                      
+## Giving linux memsize in MB, 32                                               
+                                                                                
+Starting kernel ...                                                             
+                                                                                
+[    0.000000] Linux version 3.10.36 (kerry@kerry-desktop) (gcc version 4.8.0 (4
+[    0.000000] SoC Type: Ralink RT3350 id:1 rev:2                               
+[    0.000000] bootconsole [early0] enabled                                     
+[    0.000000] CPU revision is: 0001964c (MIPS 24KEc)                           
+[    0.000000] MIPS: machine is Omnima MiniEMBWiFi                              
+[    0.000000] Determined physical RAM map:                                     
+[    0.000000]  memory: 02000000 @ 00000000 (usable)                            
+[    0.000000] Initrd not found or empty - disabling initrd                     
+[    0.000000] Zone ranges:                                                     
+[    0.000000]   Normal   [mem 0x00000000-0x01ffffff]                           
+[    0.000000] Movable zone start for each node                                 
+[    0.000000] Early memory node ranges                                         
+[    0.000000]   node   0: [mem 0x00000000-0x01ffffff]                          
+[    0.000000] Primary instruction cache 16kB, VIPT, 4-way, linesize 32 bytes.  
+[    0.000000] Primary data cache 16kB, 4-way, VIPT, no aliases, linesize 32 bys
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pa8
+[    0.000000] Kernel command line: console=ttyS0,57600 rootfstype=squashfs,jff2
+[    0.000000] PID hash table entries: 128 (order: -3, 512 bytes)               
+[    0.000000] Dentry cache hash table entries: 4096 (order: 2, 16384 bytes)    
+[    0.000000] Inode-cache hash table entries: 2048 (order: 1, 8192 bytes)      
+[    0.000000] Writing ErrCtl register=00000000                                 
+[    0.000000] Readback ErrCtl register=00000000                                
+[    0.000000] Memory: 25260k/32768k available (2134k kernel code, 7508k reserv)
+[    0.000000] SLUB: HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1       
+[    0.000000] NR_IRQS:256                                                      
+[    0.000000] CPU Clock: 320MHz                                                
+[    0.000000] Calibrating delay loop... 212.58 BogoMIPS (lpj=1062912)          
+[    0.080000] pid_max: default: 32768 minimum: 301                             
+[    0.080000] Mount-cache hash table entries: 512                              
+[    0.090000] pinctrl core: initialized pinctrl subsystem                      
+[    0.100000] NET: Registered protocol family 16                               
+[    0.160000] bio: create slab <bio-0> at 0                                    
+[    0.170000] rt2880_gpio 10000600.gpio: registering 24 gpios                  
+[    0.180000] rt2880_gpio 10000600.gpio: registering 24 irq handlers           
+[    0.200000] Switching to clocksource MIPS                                    
+[    0.210000] NET: Registered protocol family 2                                
+[    0.220000] TCP established hash table entries: 512 (order: 0, 4096 bytes)   
+[    0.230000] TCP bind hash table entries: 512 (order: -1, 2048 bytes)         
+[    0.240000] TCP: Hash tables configured (established 512 bind 512)           
+[    0.260000] TCP: reno registered                                             
+[    0.260000] UDP hash table entries: 256 (order: 0, 4096 bytes)               
+[    0.270000] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)          
+[    0.290000] NET: Registered protocol family 1                                
+[   11.380000] rt-timer 10000100.timer: maximum frequncy is 6510Hz              
+[   11.440000] squashfs: version 4.0 (2009/01/31) Phillip Lougher               
+[   11.450000] jffs2: version 2.2 (NAND) (SUMMARY) (LZMA) (RTIME) (CMODE_PRIORI.
+[   11.470000] msgmni has been set to 49                                        
+[   11.480000] io scheduler noop registered                                     
+[   11.490000] io scheduler deadline registered (default)                       
+[   11.500000] Serial: 8250/16550 driver, 2 ports, IRQ sharing disabled         
+[   11.520000] 10000c00.uartlite: ttyS0 at MMIO 0x10000c00 (irq = 20) is a 1655A
+[   11.540000] console [ttyS0] enabled, bootconsole disabled                    
+[   11.540000] console [ttyS0] enabled, bootconsole disabled                    
+[   11.570000] 1f000000.cfi: Found 1 x16 devices at 0x0 in 16-bit bank. Manufacb
+[   11.590000] Amd/Fujitsu Extended Query Table at 0x0040                       
+[   11.600000]   Amd/Fujitsu Extended Query version 1.1.                        
+[   11.610000] number of CFI chips: 1                                           
+[   11.620000] 4 ofpart partitions found on MTD device 1f000000.cfi             
+[   11.630000] Creating 4 MTD partitions on "1f000000.cfi":                     
+[   11.640000] 0x000000000000-0x000000030000 : "u-boot"                         
+[   11.650000] 0x000000030000-0x000000040000 : "u-boot-env"                     
+[   11.670000] 0x000000040000-0x000000050000 : "factory"                        
+[   11.680000] 0x000000050000-0x000000800000 : "firmware"                       
+[   11.700000] 0x00000013ce38-0x000000800000 : "rootfs"                         
+[   11.710000] mtd: partition "rootfs" must either start or end on erase block y
+[   11.740000] mtd: device 4 (rootfs) set to be root filesystem                 
+[   11.750000] mtd: partition "rootfs_data" created automatically, ofs=0x4d00000
+[   11.770000] 0x0000004d0000-0x000000800000 : "rootfs_data"                    
+[   11.800000] eth0: done loading                                               
+[   11.810000] rt2880_wdt 10000120.watchdog: Initialized                        
+[   11.820000] TCP: cubic registered                                            
+[   11.830000] NET: Registered protocol family 17                               
+[   11.830000] 8021q: 802.1Q VLAN Support v1.8                                  
+[   11.910000] Freeing unused kernel memory: 4296K (8029e000 - 806d0000)        
+procd: Console is alive                                                         
+procd: - watchdog -                                                             
+procd: - preinit -                                                              
+[   12.100000] usbcore: registered new interface driver usbfs                   
+[   12.120000] usbcore: registered new interface driver hub                     
+[   12.140000] usbcore: registered new device driver usb                        
+[   12.310000] SCSI subsystem initialized                                       
+[   12.360000] dwc_otg: version 2.72a 24-JUN-2008                               
+[   12.370000] dwc_otg: Core Release: 2.66a                                     
+[   12.590000] dwc_otg: Periodic Transfer Interrupt Enhancement - disabled      
+[   12.600000] dwc_otg: Multiprocessor Interrupt Enhancement - disabled         
+[   12.610000] dwc_otg: Using DMA mode                                          
+[   12.620000] dwc_otg: Device using Buffer DMA mode                            
+[   12.630000] dwc_otg 101c0000.otg: DWC OTG Controller                         
+[   12.640000] dwc_otg 101c0000.otg: new USB bus registered, assigned bus numbe1
+[   12.650000] dwc_otg 101c0000.otg: irq 26, io mem 0x101c0000                  
+[   12.670000] dwc_otg: Init: Port Power? op_state=1                            
+[   12.680000] dwc_otg: Init: Power Port (0)                                    
+[   12.700000] hub 1-0:1.0: USB hub found                                       
+[   12.700000] hub 1-0:1.0: 1 port detected                                     
+[   12.730000] leds-gpio gpio-leds.3: pins are not configured from the driver   
+[   12.760000] usbcore: registered new interface driver usb-storage             
+/etc/preinit: line 1: swconfig: not found                                       
+Press the [f] key and hit [enter] to enter failsafe mode                        
+Press the [1], [2], [3] or [4] key and hit [enter] to select the debug level    
+procd: - early -                                                                
+procd: - watchdog -                                                             
+procd: - ubus -                                                                 
+procd: - init -                                                                 
+Please press Enter to activate this console.                                    
+[   18.460000] NET: Registered protocol family 10                               
+[   18.530000] hidraw: raw HID events driver (C) Jiri Kosina                    
+[   18.550000] Loading modules backported from Linux version master-2014-05-22-a
+[   18.560000] Backport generated by backports.git backports-20140320-37-g5c33d0
+[   18.590000] nf_conntrack version 0.5.0 (461 buckets, 1844 max)               
+[   18.640000] usbcore: registered new interface driver usbhid                  
+[   18.660000] usbhid: USB HID core driver                                      
+[   18.680000] usbcore: registered new interface driver usbserial               
+[   18.690000] usbcore: registered new interface driver usbserial_generic       
+[   18.700000] usbserial: USB Serial support registered for generic             
+[   18.760000] xt_time: kernel timezone is -0000                                
+[   18.810000] usbcore: registered new interface driver ftdi_sio                
+[   18.830000] usbserial: USB Serial support registered for FTDI USB Serial Deve
+[   18.840000] cfg80211: Calling CRDA to update world regulatory domain         
+[   18.870000] ip_tables: (C) 2000-2006 Netfilter Core Team                     
+[   18.880000] cfg80211: World regulatory domain updated:                       
+[   18.890000] cfg80211:  DFS Master region: unset                              
+[   18.900000] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_ga)
+[   18.920000] cfg80211:   (2402000 KHz - 2472000 KHz @ 40000 KHz), (N/A, 2000 )
+[   18.940000] cfg80211:   (2457000 KHz - 2482000 KHz @ 40000 KHz), (N/A, 2000 )
+[   18.950000] cfg80211:   (2474000 KHz - 2494000 KHz @ 20000 KHz), (N/A, 2000 )
+[   18.970000] cfg80211:   (5170000 KHz - 5250000 KHz @ 80000 KHz), (N/A, 2000 )
+[   18.990000] cfg80211:   (5735000 KHz - 5835000 KHz @ 80000 KHz), (N/A, 2000 )
+[   19.000000] cfg80211:   (57240000 KHz - 63720000 KHz @ 2160000 KHz), (N/A, 0)
+[   19.240000] usbcore: registered new interface driver pl2303                  
+[   19.250000] usbserial: USB Serial support registered for pl2303              
+[   19.270000] PPP generic driver version 2.4.2                                 
+[   19.280000] NET: Registered protocol family 24                               
+[   19.350000] rt2800_wmac 10180000.wmac: failed to load eeprom property        
+[   19.360000] ieee80211 phy0: rt2x00lib_request_eeprom_file: Info - Loading EE.
+[   19.550000] ieee80211 phy0: rt2x00_set_rt: Info - RT chipset 2872, rev 0200 d
+[   19.560000] ieee80211 phy0: rt2x00_set_rf: Info - RF chipset 0005 detected   
+procd: - init complete -                                                        
+                                                                                
+                                                                                
+                                                                                
+BusyBox v1.22.1 (2014-06-12 12:33:14 CDT) built-in shell (ash)                  
+Enter 'help' for a list of built-in commands.                                   
+                                                                                
+  _______                     ________        __                                
+ |       |.-----.-----.-----.|  |  |  |.----.|  |_                              
+ |   -   ||  _  |  -__|     ||  |  |  ||   _||   _|                             
+ |_______||   __|_____|__|__||________||__|  |____|                             
+          |__| W I R E L E S S   F R E E D O M                                  
+ -----------------------------------------------------                          
+ BARRIER BREAKER (Bleeding Edge, r40891)                                        
+ -----------------------------------------------------                          
+  * 1/2 oz Galliano         Pour all ingredients into                           
+  * 4 oz cold Coffee        an irish coffee mug filled                          
+  * 1 1/2 oz Dark Rum       with crushed ice. Stir.                             
+  * 2 tsp. Creme de Cacao                                                       
+ -----------------------------------------------------                          
+root@(none):/# ls
